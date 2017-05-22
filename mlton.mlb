@@ -1,0 +1,14 @@
+$(SML_LIB)/basis/basis.mlb
+local
+	src/BASE_IMAGE.sig
+	src/OutHelpers.sml
+	src/ImageFN.sml
+	src/IMAGE.sig
+in
+	src/IMAGE1.sig
+	src/IMAGE8.sig
+	src/IMAGE24.sig
+	src/Image1.sml
+	src/Image8.sml
+	src/Image24.sml
+end
