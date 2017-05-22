@@ -6,9 +6,12 @@ local
 	src/IMAGE.sig
 in
 	src/IMAGE1.sig
-	src/IMAGE8.sig
-	src/IMAGE24.sig
 	src/Image1.sml
+
+
+	src/IMAGE8.sig
 	src/Image8.sml
+
+	src/IMAGE24.sig
 	src/Image24.sml
 end
