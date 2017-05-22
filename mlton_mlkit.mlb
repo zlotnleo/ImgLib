@@ -5,13 +5,9 @@ local
 	src/ImageFN.sml
 	src/IMAGE.sig
 in
-	src/IMAGE1.sig
 	src/Image1.sml
-
-
-	src/IMAGE8.sig
 	src/Image8.sml
-
-	src/IMAGE24.sig
 	src/Image24.sml
+	
+	src/ImageReader.sml
 end

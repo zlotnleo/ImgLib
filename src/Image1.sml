@@ -1,3 +1,11 @@
+signature IMAGE1 = sig
+	include IMAGE
+	val Black : colour
+	val White : colour
+	val isWhite : colour -> bool
+	val isBlack : colour -> bool
+end
+
 structure Image1 :> IMAGE1 = struct
 	structure T = ImageFn(type colour = bool)
 	open T

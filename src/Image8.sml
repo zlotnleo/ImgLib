@@ -1,3 +1,17 @@
+signature IMAGE8 = sig
+	include IMAGE
+	val Black : colour
+	val White : colour
+	
+	val colourFromWord8 : Word8.word -> colour
+	val colourFromInt : int -> colour
+	val colourToWord8 : colour -> Word8.word
+	val colourToInt : colour -> int
+
+	val toImage1 : image -> Image1.image
+	val fromImage1 : Image1.image -> image
+end
+
 structure Image8 :> IMAGE8 = struct
 	structure T = ImageFn(type colour = Word8.word)
 	open T
@@ -16,7 +30,7 @@ structure Image8 :> IMAGE8 = struct
 		fun printRow i oc row =
 			if i = width then ()
 			else (
-				TextIO.output(oc, Word8.toString (Array.sub(row, i)));
+				TextIO.output(oc, (StringCvt.padLeft #" " 4 o (Word8.fmt StringCvt.DEC) o Array.sub) (row, i));
 				printRow (i + 1) oc row
 			)
 		val header = "P2\n" ^ Int.toString width ^ " " ^ Int.toString height ^ "\n255\n"
